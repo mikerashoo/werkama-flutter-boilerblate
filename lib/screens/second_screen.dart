@@ -66,6 +66,43 @@ class _SecondScreenState extends State<SecondScreen> {
                         ? ErrorTryAgainBox(
                             onTryAgain: initializeScreen,
                           )
-                        : CustomTitle(title: widget.textToShow))));
+                        : SingleChildScrollView(
+                            child: Container(
+                              width: double.infinity,
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    const CustomTitle(
+                                      title: 'Fetched users :',
+                                    ),
+                                    ListView.builder(
+                                        itemCount: usersData!.data!.length,
+                                        shrinkWrap: true,
+                                        physics:
+                                            const NeverScrollableScrollPhysics(),
+                                        itemBuilder:
+                                            (BuildContext buildContext, index) {
+                                          User _user =
+                                              usersData!.data!.elementAt(index);
+                                          return Card(
+                                            child: Container(
+                                              padding: EdgeInsets.all(10),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                      '${_user.firstname} ${_user.lastname}'),
+                                                  Text('${_user.email}'),
+                                                ],
+                                              ),
+                                            ),
+                                          );
+                                        })
+                                  ]),
+                            ),
+                          ))));
   }
 }
