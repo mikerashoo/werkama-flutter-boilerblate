@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:werkama_flutter_setup/components/custom_title.dart';
+import 'package:werkama_flutter_setup/providers/app_provider.dart';
 import 'package:werkama_flutter_setup/screens/second_screen.dart';
 import 'package:werkama_flutter_setup/utils/constants.dart';
 
@@ -23,6 +25,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const CustomTitle(
               title: 'Home Screen',
+            ),
+            Consumer<AppProvider>(
+              builder: (context, appProvider, _) => CustomTitle(
+                  title:
+                      'Users fetched from server : ${appProvider.userCount}'),
             ),
             ElevatedButton(
                 onPressed: () {
