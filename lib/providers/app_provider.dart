@@ -7,4 +7,9 @@ class AppProvider extends ChangeNotifier {
     userCount = _count;
     notifyListeners();
   }
+
+  Future<dynamic> fetchUsers() async {
+    await Future.delayed(Duration(seconds: 2), () {});
+    return "error";
+  }
 }
