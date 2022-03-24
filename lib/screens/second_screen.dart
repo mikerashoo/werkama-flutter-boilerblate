@@ -88,7 +88,7 @@ class _SecondScreenState extends State<SecondScreen> {
                                               usersData!.data!.elementAt(index);
                                           return Card(
                                             child: Container(
-                                              padding: EdgeInsets.all(10),
+                                              padding: const EdgeInsets.all(10),
                                               child: Column(
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
