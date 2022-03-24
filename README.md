@@ -1,17 +1,34 @@
-# werkama_flutter_setup
+# werkama flutter boilerplate
 
-A new Flutter project.
+Flutter boilerplate which includes fundamental implementations required to create any flutter project
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This boilarplate is a starting point for a Flutter application with necessary folder structures, packages and implementations. By using this boilerplate we can have standard pattern in all flutter project. This will save time and energy to setup flutter project.
 
-A few resources to get you started if this is your first Flutter project:
+## Features implemented
+1.  Folder structuring
+2.  Provider for state management
+3. Making api requestes
+4. Routing 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## How to use
+**Step 1: **
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# werkama-flutter-recommended-setup" 
+Download or clone the repo
+`https://github.com/mikerashoo/werkama-flutter-boilerblate`
+
+
+**Step 2:**
+
+Goto project root folder and run
+`flutter pub get `
+
+**Step 3:**
+
+Make necessary changes like:
+- name and description on pubsec.yaml
+- package names in androidManifest
+
+
+
